@@ -1,6 +1,6 @@
 #include "day_1/day_1.h"
 
-#include "utility//io.h"
+#include "utility/io.h"
 
 #include "fmt/format.h"
 

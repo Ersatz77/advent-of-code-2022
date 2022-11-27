@@ -18,7 +18,7 @@ int main(int argc, char* argv[])
     {
         if (argc != 2)
         {
-            throw std::runtime_error("A path to a folder with inputs is required");
+            throw std::invalid_argument("A path to a folder with inputs is required");
         }
 
         std::filesystem::path input_root = argv[1];
