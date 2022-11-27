@@ -1,1 +1,1 @@
-# advent-of-code-2022
+!(The best solutions for Advent of Code)
