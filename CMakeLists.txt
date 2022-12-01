@@ -47,7 +47,7 @@ FetchContent_MakeAvailable(fmt)
 # ------------------------------------------------------------------------------
 # Create executable
 # ------------------------------------------------------------------------------
-add_executable(aoc_2022_app "src/main.cpp" "src/utility/day.h"  "src/utility/io.h" "src/utility/io.cpp" "src/utility/math.h" "src/utility/math.cpp" "src/utility/point.h" "src/utility/point.cpp" "src/utility/string.h" "src/utility/string.cpp" "src/utility/utility.h" "src/day_1/day_1.h" "src/day_1/day_1.cpp")
+add_executable(aoc_2022_app "src/main.cpp" "src/utility/day.h"  "src/utility/io.h" "src/utility/io.cpp" "src/utility/math.h" "src/utility/math.cpp" "src/utility/point.h" "src/utility/point.cpp" "src/utility/string.h" "src/utility/string.cpp" "src/utility/utility.h" "src/day_1/day_1.h" "src/day_1/day_1.cpp" "src/day_2/day_2.h" "src/day_2/day_2.cpp")
 
 target_include_directories(aoc_2022_app
     PRIVATE

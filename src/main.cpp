@@ -1,6 +1,6 @@
 #include "utility/day.h"
 #include "day_1/day_1.h"
-
+#include "day_2/day_2.h"
 
 #include "fmt/format.h"
 
@@ -28,6 +28,7 @@ int main(int argc, char* argv[])
         solutions.reserve(25);
 
         solutions.push_back(std::make_unique<aoc::Day_1>());
+        solutions.push_back(std::make_unique<aoc::Day_2>());
 
         uint64_t total_runtime = 0;
         for (const auto& day : solutions)
