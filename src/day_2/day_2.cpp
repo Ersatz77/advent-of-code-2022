@@ -35,10 +35,10 @@ namespace aoc
 		std::vector<std::pair<int, int>> input = parse_input(input_path / "day_2.txt");
 
 		int total_score = 0;
-		for (const auto& game : input)
+		for (const auto& round : input)
 		{
-			int opponent = game.first;
-			int you = game.second;
+			int opponent = round.first;
+			int you = round.second;
 			if (opponent == ((you + 2) % 3))
 			{
 				// Win
@@ -64,10 +64,10 @@ namespace aoc
 		std::vector<std::pair<int, int>> input = parse_input(input_path / "day_2.txt");
 
 		int total_score = 0;
-		for (const auto& game : input)
+		for (const auto& round : input)
 		{
-			int opponent = game.first;
-			int result = game.second;
+			int opponent = round.first;
+			int result = round.second;
 			switch (result)
 			{
 				case 0:
