@@ -9,6 +9,7 @@
 #include <filesystem>
 #include <string>
 #include <vector>
+#include <cstddef>
 
 namespace aoc
 {
