@@ -22,9 +22,7 @@ namespace aoc
 		char your_move_char = ' ';
 		while (file >> opponent_move_char >> your_move_char)
 		{
-			int opponent_move = (opponent_move_char > 'C' ? opponent_move_char - 'X' : opponent_move_char - 'A');
-			int your_move = (your_move_char > 'C' ? your_move_char - 'X' : your_move_char - 'A');
-			input.emplace_back(opponent_move, your_move);
+			input.emplace_back(opponent_move_char - 'A', your_move_char - 'X');
 		}
 
 		return input;
