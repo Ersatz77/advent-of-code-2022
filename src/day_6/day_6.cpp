@@ -29,7 +29,7 @@ namespace aoc
 		size_t start_of_packet = 0;
 		for (size_t i = 4; i < buffer.size(); ++i)
 		{
-			std::string buffer_part(buffer.begin() + i - 4, buffer.begin() + i);
+			std::string buffer_part = buffer.substr(i - 4, 4);
 			if (aoc::is_unique(buffer_part))
 			{
 				start_of_packet = i;
@@ -47,7 +47,7 @@ namespace aoc
 		size_t start_of_message = 0;
 		for (size_t i = 14; i < buffer.size(); ++i)
 		{
-			std::string buffer_part(buffer.begin() + i - 14, buffer.begin() + i);
+			std::string buffer_part = buffer.substr(i - 14, 14);
 			if (aoc::is_unique(buffer_part))
 			{
 				start_of_message = i;
