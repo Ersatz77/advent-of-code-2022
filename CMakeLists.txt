@@ -47,7 +47,7 @@ FetchContent_MakeAvailable(fmt)
 # ------------------------------------------------------------------------------
 # Create executable
 # ------------------------------------------------------------------------------
-add_executable(aoc_2022_app "src/main.cpp" "src/utility/day.h"  "src/utility/io.h" "src/utility/io.cpp" "src/utility/math.h" "src/utility/math.cpp" "src/utility/point.h" "src/utility/point.cpp" "src/utility/string.h" "src/utility/string.cpp" "src/utility/utility.h" "src/day_1/day_1.h" "src/day_1/day_1.cpp" "src/day_2/day_2.h" "src/day_2/day_2.cpp" "src/day_3/day_3.h" "src/day_3/day_3.cpp" "src/day_4/day_4.h" "src/day_4/day_4.cpp" "src/day_5/day_5.h" "src/day_5/day_5.cpp" "src/day_6/day_6.h" "src/day_6/day_6.cpp")
+add_executable(aoc_2022_app "src/main.cpp" "src/utility/day.h"  "src/utility/io.h" "src/utility/io.cpp" "src/utility/math.h" "src/utility/math.cpp" "src/utility/point.h" "src/utility/point.cpp" "src/utility/string.h" "src/utility/string.cpp" "src/utility/utility.h" "src/day_1/day_1.h" "src/day_1/day_1.cpp" "src/day_2/day_2.h" "src/day_2/day_2.cpp" "src/day_3/day_3.h" "src/day_3/day_3.cpp" "src/day_4/day_4.h" "src/day_4/day_4.cpp" "src/day_5/day_5.h" "src/day_5/day_5.cpp" "src/day_6/day_6.h" "src/day_6/day_6.cpp" "src/day_7/day_7.h" "src/day_7/day_7.cpp")
 
 target_include_directories(aoc_2022_app
     PRIVATE

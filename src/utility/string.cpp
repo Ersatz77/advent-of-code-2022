@@ -39,4 +39,20 @@ namespace aoc
 		return std::all_of(str.begin(), str.end(), [](const char c) { return std::isupper(c); });
 	}
 
+	bool is_unique(const std::string& str)
+	{
+		for (size_t i = 0; i < str.length(); ++i)
+		{
+			for (size_t j = i + 1; j < str.length(); ++j)
+			{
+				if (str[i] == str[j])
+				{
+					return false;
+				}
+			}
+		}
+
+		return true;
+	}
+
 } // aoc

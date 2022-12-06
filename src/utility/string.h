@@ -18,6 +18,9 @@ namespace aoc
 	// Returns true if the whole string is uppercase
 	bool is_upper(const std::string& str);
 
+	// Returns true if the characters in the string only appear once
+	bool is_unique(const std::string& str);
+
 } // aoc
 
 #endif // !AOC_UTILITIES_STRING_H
