@@ -25,7 +25,7 @@ namespace aoc
 
 	static std::pair<std::vector<std::stack<char>>, std::vector<Stacking_step>> parse_input(const std::filesystem::path& path)
 	{
-		std::ifstream file = aoc::open_file(path);
+		std::ifstream file = open_file(path);
 
 		// Create stacks
 		std::vector<std::string> lines;

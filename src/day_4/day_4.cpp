@@ -22,7 +22,7 @@ namespace aoc
 
 	static std::vector<Assignment> parse_input(const std::filesystem::path& path)
 	{
-		std::ifstream file = aoc::open_file(path);
+		std::ifstream file = open_file(path);
 
 		std::vector<Assignment> assignments;
 		std::pair<int, int> section_1;

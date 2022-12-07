@@ -16,7 +16,7 @@ namespace aoc
 {
 	static std::vector<int> parse_input(const std::filesystem::path& path)
 	{
-		std::ifstream file = aoc::open_file(path);
+		std::ifstream file = open_file(path);
 
 		std::vector<int> input;
 		while (file)

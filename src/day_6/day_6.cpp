@@ -14,7 +14,7 @@ namespace aoc
 {
 	static std::string parse_input(const std::filesystem::path& path)
 	{
-		std::ifstream file = aoc::open_file(path);
+		std::ifstream file = open_file(path);
 
 		std::string buffer;
 		file >> buffer;

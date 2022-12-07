@@ -15,7 +15,7 @@ namespace aoc
 {
 	static std::vector<std::pair<int, int>> parse_input(const std::filesystem::path& path)
 	{
-		std::ifstream file = aoc::open_file(path);
+		std::ifstream file = open_file(path);
 
 		std::vector<std::pair<int, int>> input;
 		char opponent_move_char = ' ';

@@ -9,13 +9,12 @@
 #include <filesystem>
 #include <string>
 #include <vector>
-#include <cstddef>
 
 namespace aoc
 {
 	static std::vector<std::string> parse_input(const std::filesystem::path& path)
 	{
-		std::ifstream file = aoc::open_file(path);
+		std::ifstream file = open_file(path);
 
 		std::vector<std::string> rucksacks;
 		for (std::string rucksack_items; file >> rucksack_items; )
