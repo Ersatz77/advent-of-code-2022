@@ -17,7 +17,6 @@ namespace aoc
 
 		void add_directory(const std::string& name);
 		void add_file(const std::string& name, const size_t size);
-		void update_path();
 
 		Directory* parent() const { return m_parent; }
 		std::string name() const { return m_name; }
