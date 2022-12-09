@@ -24,6 +24,12 @@ namespace aoc
 	double manhattan_distance(const Point& p1, const Point& p2);
 	double manhattan_distance(const Point_3d& p1, const Point_3d& p2);
 
+	template<typename T, typename = std::enable_if_t<std::is_signed_v<T>>>
+	T signum(const T v)
+	{
+		return (T(0) < v) - (T(0) > v);
+	}
+
 	// Modular multiplicative inverse
 	template<typename T, typename = std::enable_if_t<std::is_integral_v<T>>>
 	T mod_mul_inv(T a, T b)

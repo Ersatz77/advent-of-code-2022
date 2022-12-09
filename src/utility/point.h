@@ -28,8 +28,8 @@ namespace aoc
 		Point& operator*=(const Point& other);
 		Point& operator/=(const Point& other);
 
-		double x;
-		double y;
+		double x = 0;
+		double y = 0;
 
 		static const Point origin;
 	};
@@ -52,9 +52,9 @@ namespace aoc
 		Point_3d& operator*=(const Point_3d& other);
 		Point_3d& operator/=(const Point_3d& other);
 
-		double x;
-		double y;
-		double z;
+		double x = 0;
+		double y = 0;
+		double z = 0;
 
 		static const Point_3d origin;
 	};

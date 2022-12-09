@@ -12,7 +12,7 @@ namespace aoc
 	// Point
 	// --------------------------------------------------------------------------------
 
-	const Point Point::origin(0.0, 0.0);
+	const Point Point::origin{ 0.0, 0.0 };
 
 	// Returns the 4 (NESW) points around this point
 	std::array<Point, 4> Point::adjacent_cardinal() const
