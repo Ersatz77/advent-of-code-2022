@@ -70,8 +70,8 @@ namespace aoc
 		int id() const { return m_id; };
 		uint64_t inspected_items() const { return m_inspected_items; };
 		const Monkey_test& get_test() const { return m_test; };
-		const uint64_t get_divisible_product() { return m_divisible_product; };
-		void set_divisible_product(const uint64_t divisible_product) { m_divisible_product = divisible_product; };
+		const uint64_t get_divisor_product() { return m_divisor_product; };
+		void set_divisor_product(const uint64_t divisor_product) { m_divisor_product = divisor_product; };
 
 		friend std::istream& operator>>(std::istream& is, Monkey& monkey);
 		friend std::ostream& operator<<(std::ostream& os, const Monkey& monkey);
@@ -85,7 +85,7 @@ namespace aoc
 		Monkey_operation m_operation;
 		Monkey_test m_test;
 
-		uint64_t m_divisible_product;
+		uint64_t m_divisor_product;
 	};
 
 } // aoc

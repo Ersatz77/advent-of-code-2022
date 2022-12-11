@@ -97,7 +97,7 @@ namespace aoc
 	// ------------------------------------------------------------------------------------
 
 	Monkey::Monkey(const int id, const std::vector<uint64_t> items, const Monkey_operation op, const Monkey_test test) :
-		m_id(id), m_inspected_items(0), m_operation(op), m_test(test), m_divisible_product(0)
+		m_id(id), m_inspected_items(0), m_operation(op), m_test(test), m_divisor_product(0)
 	{
 		for (const uint64_t i : items)
 		{
@@ -123,7 +123,7 @@ namespace aoc
 			if (enable_relief)
 				worry_level = m_operation.execute(item) / 3;
 			else
-				worry_level = m_operation.execute(item % m_divisible_product);
+				worry_level = m_operation.execute(item % m_divisor_product);
 
 			// Get the ID of the monkey to give this item to
 			int throw_to_id = m_test.execute(worry_level);

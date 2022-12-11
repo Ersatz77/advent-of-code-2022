@@ -20,19 +20,19 @@ namespace aoc
 		std::ifstream file = open_file(path);
 
 		std::vector<Monkey> monkeys;
-		uint64_t divisible_product = 1;
+		uint64_t divisor_product = 1;
 		while (file)
 		{
 			Monkey monkey;
 			file >> monkey;
-			divisible_product *= monkey.get_test().get_divisor();
+			divisor_product *= monkey.get_test().get_divisor();
 			monkeys.push_back(monkey);
 		}
 
-		// Set divisible product
+		// Set divisor product
 		for (Monkey& monkey : monkeys)
 		{
-			monkey.set_divisible_product(divisible_product);
+			monkey.set_divisor_product(divisor_product);
 		}
 
 		return monkeys;
