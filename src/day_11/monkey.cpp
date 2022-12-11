@@ -39,8 +39,8 @@ namespace aoc
 
 		operation.m_lhs_type = (operation_parts[0] == "old") ? Monkey_operand_type::OLD_VALUE : Monkey_operand_type::LITERAL;
 		operation.m_rhs_type = (operation_parts[2] == "old") ? Monkey_operand_type::OLD_VALUE : Monkey_operand_type::LITERAL;
-		operation.m_lhs_literal_value = (operation_parts[0] != "old") ? std::stoi(operation_parts[0]) : -1;
-		operation.m_rhs_literal_value = (operation_parts[2] != "old") ? std::stoi(operation_parts[2]) : -1;
+		operation.m_lhs_literal_value = (operation_parts[0] != "old") ? std::stoi(operation_parts[0]) : 0;
+		operation.m_rhs_literal_value = (operation_parts[2] != "old") ? std::stoi(operation_parts[2]) : 0;
 		operation.m_op = (operation_parts[1] == "+") ? Monkey_operator::ADD : Monkey_operator::MULTIPLY;
 
 		return is;
