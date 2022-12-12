@@ -137,7 +137,7 @@ namespace aoc
 					continue;
 
 				int steps = shortest_path(grid, Point(x, y), end);
-				fewest_steps = (steps > 0) ? std::min(fewest_steps, steps) : fewest_steps;
+				fewest_steps = (steps >= 0) ? std::min(fewest_steps, steps) : fewest_steps;
 			}
 		}
 
