@@ -61,6 +61,19 @@ namespace aoc
 		return p.x >= 0 && p.x <= max_x && p.y >= 0 && p.y <= max_y;
 	}
 
+	static bool adjacent_to(const std::vector<std::vector<char>>& grid, const Point& p, const char c)
+	{
+		for (const Point& adj : p.adjacent_cardinal())
+		{
+			if (on_grid(grid, adj) && grid[adj.y][adj.x] == c)
+			{
+				return true;
+			}
+		}
+
+		return false;
+	}
+
 	static int shortest_path(const std::vector<std::vector<char>>& grid, const Point& start, const Point& end)
 	{
 		std::queue<std::pair<Point, int>> to_process;
@@ -134,6 +147,9 @@ namespace aoc
 			for (size_t x = 0; x < grid.front().size(); ++x)
 			{
 				if (grid[y][x] != 'a')
+					continue;
+
+				if (!adjacent_to(grid, Point(x, y), 'b'))
 					continue;
 
 				int steps = shortest_path(grid, Point(x, y), end);
