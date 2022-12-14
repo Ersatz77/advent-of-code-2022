@@ -13,6 +13,7 @@
 #include "day_12/day_12.h"
 #include "day_13/day_13.h"
 #include "day_14/day_14.h"
+#include "day_15/day_15.h"
 
 #include "fmt/format.h"
 
@@ -53,6 +54,7 @@ int main(int argc, char* argv[])
         solutions.push_back(std::make_unique<aoc::Day_12>());
         solutions.push_back(std::make_unique<aoc::Day_13>());
         solutions.push_back(std::make_unique<aoc::Day_14>());
+        solutions.push_back(std::make_unique<aoc::Day_15>());
 
         uint64_t total_runtime = 0;
         for (const auto& day : solutions)
