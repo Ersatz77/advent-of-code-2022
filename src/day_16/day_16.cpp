@@ -76,7 +76,7 @@ namespace aoc
 
 	static std::unordered_map<std::pair<std::string, std::string>, int> create_shortest_paths(const std::unordered_map<std::string, Valve>& valves)
 	{
-		// Generate the shortest paths between all valves using the Floyd–Warshall algorithm
+		// Generate the shortest paths between all valves using the Floyd-Warshall algorithm
 		// https://en.wikipedia.org/wiki/Floyd%E2%80%93Warshall_algorithm
 		//
 		// This will allow us to quickly jump between valves that will actually affect the pressure
