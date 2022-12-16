@@ -1,8 +1,10 @@
 #ifndef AOC_UTILITIES_UTILITY_H
 #define AOC_UTILITIES_UTILITY_H
 
+#include <string>
 #include <vector>
 #include <array>
+#include <tuple>
 #include <utility>
 #include <cstdint>
 #include <type_traits>
@@ -74,6 +76,18 @@ namespace std
 	};
 
 	template <>
+	struct hash<pair<string, string>>
+	{
+		std::size_t operator()(const pair<string, string>& p) const
+		{
+			size_t seed = 0;
+			aoc::hash_combine(seed, p.first);
+			aoc::hash_combine(seed, p.second);
+			return seed;
+		}
+	};
+
+	template <>
 	struct hash<pair<int, int>>
 	{
 		std::size_t operator()(const pair<int, int>& p) const
@@ -81,6 +95,21 @@ namespace std
 			size_t seed = 0;
 			aoc::hash_combine(seed, p.first);
 			aoc::hash_combine(seed, p.second);
+			return seed;
+		}
+	};
+
+	template <>
+	struct hash<tuple<string, int, string, int, string>>
+	{
+		std::size_t operator()(const tuple<string, int, string, int, string>& t) const
+		{
+			size_t seed = 0;
+			aoc::hash_combine(seed, std::get<0>(t));
+			aoc::hash_combine(seed, std::get<1>(t));
+			aoc::hash_combine(seed, std::get<2>(t));
+			aoc::hash_combine(seed, std::get<3>(t));
+			aoc::hash_combine(seed, std::get<4>(t));
 			return seed;
 		}
 	};
