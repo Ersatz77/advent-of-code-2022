@@ -20,7 +20,6 @@
 #include <cstdint>
 #include <utility>
 
-
 namespace aoc
 {
 	static std::vector<Sensor> parse_input(const std::filesystem::path& path)
