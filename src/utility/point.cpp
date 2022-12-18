@@ -113,6 +113,42 @@ namespace aoc
 
 	const Point_3d Point_3d::origin{ 0.0, 0.0, 0.0 };
 
+	// Returns the 6 (NESWUD) points around this point
+	std::array<Point_3d, 6> Point_3d::adjacent_cardinal() const
+	{
+		std::array<Point_3d, 6> adjacent = {};
+
+		constexpr std::array<std::array<double, 3>, 6> offsets = { {{0, 1, 0}, {0, -1, 0}, {1, 0, 0}, {-1, 0, 0}, {0, 0, 1}, {0, 0, -1}} };
+		for (size_t i = 0; i < offsets.size(); ++i)
+		{
+			adjacent[i].x = x + offsets[i][0];
+			adjacent[i].y = y + offsets[i][1];
+			adjacent[i].z = z + offsets[i][2];
+		}
+
+		return adjacent;
+	}
+
+	// Returns all 26 points around this point
+	std::array<Point_3d, 26> Point_3d::adjacent() const
+	{
+		std::array<Point_3d, 26> adjacent = {};
+
+		constexpr std::array<std::array<double, 3>, 26> offsets = { {
+			{1, 0, 0}, {1, 0, 1}, {1, 0, -1}, {0, 0, 1}, {0, 0, -1}, {-1, 0, 0}, {-1, 0, 1}, {-1, 0, -1},
+			{1, 1, 0}, {1, 1, 1}, {1, 1, -1}, {0, 1, 0} , {0, 1, 1}, {0, 1, -1}, {-1, 1, 0}, {-1, 1, 1}, {-1, 1, -1},
+			{1, -1, 0}, {1, -1, 1}, {1, -1, -1}, {0, -1, 0}, {0, -1, 1}, {0, -1, -1}, {-1, -1, 0}, {-1, -1, 1}, {-1, -1, -1},
+		} };
+		for (size_t i = 0; i < offsets.size(); ++i)
+		{
+			adjacent[i].x = x + offsets[i][0];
+			adjacent[i].y = y + offsets[i][1];
+			adjacent[i].z = z + offsets[i][2];
+		}
+
+		return adjacent;
+	}
+
 	std::string Point_3d::to_string() const
 	{
 		return fmt::format("({},{},{})", x, y, z);

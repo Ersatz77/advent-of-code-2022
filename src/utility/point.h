@@ -43,6 +43,12 @@ namespace aoc
 	class Point_3d
 	{
 	public:
+		// Returns the 6 (NESWUD) points around this point
+		std::array<Point_3d, 6> adjacent_cardinal() const;
+
+		// Returns all 26 points around this point
+		std::array<Point_3d, 26> adjacent() const;
+
 		std::string to_string() const;
 		std::array<double, 3> to_array() const;
 
