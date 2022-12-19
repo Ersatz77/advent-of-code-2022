@@ -130,6 +130,7 @@ namespace aoc
 	std::string Day_19::part_1(const std::filesystem::path& input_path) const
 	{
 		std::vector<Factory_blueprint> blueprints = parse_input(input_path / "day_19.txt");
+		
 		constexpr int time = 24;
 		int quality_level = 0;
 		for (const Factory_blueprint& blueprint : blueprints)
