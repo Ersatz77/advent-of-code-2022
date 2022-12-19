@@ -30,6 +30,12 @@ namespace aoc
 		return (T(0) < v) - (T(0) > v);
 	}
 
+	template<typename T, typename = std::enable_if_t<std::is_arithmetic_v<T>>>
+	T gaussian_sum(const T a, const T b)
+	{
+		return ((b + a) * (b - a + 1)) / T(2);
+	}
+
 	// Modular multiplicative inverse
 	template<typename T, typename = std::enable_if_t<std::is_integral_v<T>>>
 	T mod_mul_inv(T a, T b)
