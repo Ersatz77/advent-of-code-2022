@@ -27,13 +27,19 @@ namespace aoc
 	template<typename T, typename = std::enable_if_t<std::is_signed_v<T>>>
 	T signum(const T v)
 	{
-		return (T(0) < v) - (T(0) > v);
+		return (0 < v) - (0 > v);
 	}
 
 	template<typename T, typename = std::enable_if_t<std::is_arithmetic_v<T>>>
 	T gaussian_sum(const T a, const T b)
 	{
-		return ((b + a) * (b - a + 1)) / T(2);
+		return ((b + a) * (b - a + 1)) / 2;
+	}
+
+	template<typename T, typename = std::enable_if_t<std::is_arithmetic_v<T>>>
+	T euclid_mod(const T a, const T b)
+	{
+		return ((a % b) + b) % b;
 	}
 
 	// Modular multiplicative inverse
