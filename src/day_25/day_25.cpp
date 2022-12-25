@@ -96,6 +96,7 @@ namespace aoc
 			total_fuel_decimal += from_snafu(snafu_number);
 		}
 
+		// Get the total amount of fuel required in snafu
 		std::string total_fuel_snafu = to_snafu(total_fuel_decimal);
 
 		return fmt::format("Day 25 Part 1 | Total fuel for all the hot air balloons: {}", total_fuel_snafu);
